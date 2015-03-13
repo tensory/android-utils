@@ -14,7 +14,7 @@ def get_tag_value(line):
     return p.search(line).group().strip('<>')
 
 input = """
-	android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:textColor="@color/white"

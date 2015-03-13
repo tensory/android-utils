@@ -26,9 +26,10 @@ input = """
     android:paddingBottom="2dp"
 """
 
-input = """
-<item name="android:layout_width">match_parent</item>
-"""
+## to go the other way, try 
+# input = """
+# <item name="android:layout_width">match_parent</item>
+# """
 
 # you can also supply an input block of styles from styles.xml,
 # e.g. <item name="android:layout_width">match_parent</item>

@@ -2,6 +2,13 @@
 
 import re
 
+def is_property_name(line):
+    p = re.compile('[a-zA-Z]+:') # match anything in double quotes
+    try:
+        return p.search(line).group().strip('":') is not None
+    except:
+        return False
+
 def get_layout_key(line):
     return line[:line.index('=')]
 
@@ -35,12 +42,12 @@ input = """
 # e.g. <item name="android:layout_width">match_parent</item>
 
 input_lines = input.strip().split('\n')
+
+# clean_input includes all input text, stripped of any whitespace
 clean_input = [line.strip() for line in input_lines]
 clean_output = []
 
-# clean_input includes all input text, stripped of any whitespace
-
-if clean_input[0].startswith('android:'):
+if is_property_name(clean_input[0]):
     # convert layout XML style to the format expected by styles.xml
     # android:layout_width="match_parent" -> <item name="android:layout_width">match_parent</item>
     for line in clean_input:

@@ -40,6 +40,6 @@ Rename all drawables in `some_random_icon/` to the name `launch_icon`.
 
 #### copy_image_to_drawables Usage
 
-`./copy_image_to_drawables.py ~/Downloads/some_random_icon/ ~/Users/alice/workspace/android/app/res/drawable/`
+`./copy_image_to_drawables.py ~/Downloads/some_random_icon/  ~/path/to/project/android/app/res/drawable/`
 
 Copy all images in the source directory to appropriate target drawable directories in your Android project.

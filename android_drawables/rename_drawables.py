@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Ari Lacenski 20151218
+# Ari Lacenski 20160108
 
 import sys, os
 import shutil
@@ -33,11 +33,6 @@ if not new_name:
 	error_no_rename()
 	exit()
 
-# the unique filename of the asset: 
-# ic_launcher.png
-asset_filename = os.path.basename(source_dir.rstrip(os.sep)) if source_dir.endswith(os.sep) else os.path.basename(source_dir)
-asset_filename = asset_filename + ".png"
-
 def move_file(density_prefix, source_dir, asset_filename, new_name):
 
 	# confirm that the file exists at the expected density
@@ -69,7 +64,10 @@ def move_file(density_prefix, source_dir, asset_filename, new_name):
 # prune trailing slashes to prepare dirname
 source_dir = source_dir.rstrip(os.sep)
 
-# os.path.abspath(os.path.join(source_dir, os.path.pardir)) if source_dir.endswith(os.sep) else 
+# the unique filename of the asset: 
+# ic_launcher.png
+asset_filename = os.path.basename(source_dir) + ".png"
+
 parent_name = os.path.dirname(source_dir)
 new_asset_dir = os.path.join(parent_name, new_name)
 shutil.copytree(source_dir, new_asset_dir)

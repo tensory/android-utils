@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Ari Lacenski 20151218
+# Ari Lacenski 20160107
 
 def for_all_densities(func, **kwargs):
 	for density_prefix in ['mdpi', 'hdpi', 'xhdpi', 'xxhdpi', 'xxxhdpi']:

@@ -34,10 +34,6 @@ if not os.path.exists(dest_dir):
 	error_no_destination()
 	exit()
 
-# the unique filename of the asset: 
-# ic_launcher.png
-asset_filename = os.path.basename(source_dir) + ".png"
-
 def copy_file(density_prefix, source_dir, dest_dir, asset_filename):
 	
 	# confirm that the file exists at the expected density
@@ -67,5 +63,11 @@ def copy_file(density_prefix, source_dir, dest_dir, asset_filename):
 		else:
 			print(dest_asset_path + " created.")
 
+# prune trailing slashes to prepare dirname
+source_dir = source_dir.rstrip(os.sep)
+
+# the unique filename of the asset: 
+# ic_launcher.png
+asset_filename = os.path.basename(source_dir) + ".png"
 
 for_all_densities(copy_file, source_dir=source_dir, dest_dir=dest_dir, asset_filename=asset_filename)

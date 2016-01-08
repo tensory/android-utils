@@ -32,8 +32,14 @@ You don't need to have a subdirectory for every density. Recognized densities ar
 
 The trailing slash after a source directory name is optional.
 
-#### Usage
+#### rename_drawables Usage
 
-`./rename_drawables.py ~/Downloads/some_random_icon/ launch_icon` -- Rename all drawables in `some_random_icon/` to the name `launch_icon`.
+`./rename_drawables.py ~/Downloads/some_random_icon/ launch_icon`
 
-`./copy_image_to_drawables.py ~/Downloads/some_random_icon/ ~/Users/alice/workspace/android/app/res/drawable/` -- Copy all images in the source directory to appropriate target drawable directories in your Android project.
+Rename all drawables in `some_random_icon/` to the name `launch_icon`.
+
+#### copy_image_to_drawables Usage
+
+`./copy_image_to_drawables.py ~/Downloads/some_random_icon/ ~/Users/alice/workspace/android/app/res/drawable/`
+
+Copy all images in the source directory to appropriate target drawable directories in your Android project.

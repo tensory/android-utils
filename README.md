@@ -15,7 +15,7 @@ Two utilities for working with groups of drawables exported from Zeplin.
 Files must be within this directory structure:
 
 ```
-~/Downloads/some_random_icon/
+~/your/download/path/some_random_icon/
     drawable-mdpi/
         some_random_icon.png
     drawable-hdpi/
@@ -34,10 +34,6 @@ The trailing slash after a source directory name is optional.
 
 #### Usage
 
-`./rename_drawables.py ~/Downloads/some_random_icon/ launch_icon`
+`./rename_drawables.py ~/Downloads/some_random_icon/ launch_icon` -- Rename all drawables in `some_random_icon/` to the name `launch_icon`.
 
-Rename all drawables in `some_random_icon/` to the name `launch_icon`.
-
-`./copy_image_to_drawables.py ~/Downloads/some_random_icon/ ~/Users/alice/workspace/android/app/res/drawable/`
-
-Copy all images in the source directory to appropriate target drawable directories in your Android project.
+`./copy_image_to_drawables.py ~/Downloads/some_random_icon/ ~/Users/alice/workspace/android/app/res/drawable/` -- Copy all images in the source directory to appropriate target drawable directories in your Android project.
